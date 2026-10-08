@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PREMIUM GIFTS- Shipment Tracking</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    .header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+    }
+
+    .header p {
+      margin-top: 6px;
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .demo {
+      background: #fff3cd;
+      color: #856404;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .tracking {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .tracking small {
+      color: #64748b;
+    }
+
+    .tracking-code {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+
+    .info {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .label {
+      color: #64748b;
+    }
+
+    .value {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .status {
+      background: #ecfdf5;
+      color: #047857;
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .timeline {
+      border-left: 3px solid #2563eb;
+      padding-left: 20px;
+    }
+
+    .step {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .step::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 2px;
+      width: 12px;
+      height: 12px;
+      background: #2563eb;
+      border-radius: 50%;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .step p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 20px;
+      }
+
+      .row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>🎁 GiftHub</h1>
+    <p>Shipment Tracking</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+
+      <div class="demo">
+         TRACKING — A REAL SHIPMENT
+      </div>
+
+      <div class="tracking">
+        <small>Tracking ID</small>
+        <div class="tracking-code">GH-IND-261013-SHR086</div>
+      </div>
+
+      <div class="status">
+        🟢 Scheduled for Delivery — 13 October 2026
+      </div>
+
+      <div class="info">
+        <div class="row">
+          <span class="label">Customer</span>
+          <span class="value">Sharon</span>
+        </div>
+
+        <div class="row">
+          <span class="label">Destination</span>
+          <span class="value">Bandlaguda Jagir, Hyderabad</span>
+        </div>
+
+        <div class="row">
+          <span class="label">State</span>
+          <span class="value">Telangana</span>
+        </div>
+
+        <div class="row">
+          <span class="label">PIN Code</span>
+          <span class="value">500086</span>
+        </div>
+
+        <div class="row">
+          <span class="label">Country</span>
+          <span class="value">India</span>
+        </div>
+
+        <div class="row">
+          <span class="label">Expected Delivery</span>
+          <span class="value">13 October 2026</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="step">
+          <h3>Order Confirmed</h3>
+          <p>Shipment information received.</p>
+        </div>
+
+        <div class="step">
+          <h3>In Transit</h3>
+          <p>Package is being prepared for delivery.</p>
+        </div>
+
+        <div class="step">
+          <h3>Out for Delivery</h3>
+          <p>Scheduled for 13 October 2026.</p>
+        </div>
+
+        <div class="step">
+          <h3>Delivered</h3>
+          <p>Pending delivery.</p>
+        </div>
+
+      </div>
+
+      <footer>
+        Hamper Box Tracking Portal © 2026
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+                                </html>
