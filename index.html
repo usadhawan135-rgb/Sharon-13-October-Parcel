@@ -1,198 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PREMIUM GIFTS- Shipment Tracking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREMIUM TRACKING</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      background: #f4f6f8;
-      color: #222;
-    }
+body {
+  background: #f3f4f6;
+  color: #111827;
+}
 
-    .header {
-      background: #111827;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+.header {
+  background: #111827;
+  color: white;
+  padding: 24px 15px;
+  text-align: center;
+}
 
-    .header h1 {
-      font-size: 28px;
-    }
+.header h1 {
+  font-size: 30px;
+}
 
-    .header p {
-      margin-top: 6px;
-      color: #cbd5e1;
-    }
+.header p {
+  color: #cbd5e1;
+  margin-top: 6px;
+}
 
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 18px;
-    }
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
 
-    .demo {
-      background: #fff3cd;
-      color: #856404;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 22px;
-    }
+.demo {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
 
-    .tracking {
-      text-align: center;
-      margin-bottom: 28px;
-    }
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
 
-    .tracking small {
-      color: #64748b;
-    }
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
 
-    .tracking-code {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 8px;
-      letter-spacing: 1px;
-    }
+.search-box input:focus {
+  border-color: #2563eb;
+}
 
-    .info {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
+.search-box button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e5e7eb;
-    }
+.search-box button:hover {
+  background: #1d4ed8;
+}
 
-    .label {
-      color: #64748b;
-    }
+#error {
+  display: none;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
 
-    .value {
-      font-weight: 600;
-      text-align: right;
-    }
+#result {
+  display: none;
+}
 
-    .status {
-      background: #ecfdf5;
-      color: #047857;
-      padding: 14px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
+.status {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
 
-    .timeline {
-      border-left: 3px solid #2563eb;
-      padding-left: 20px;
-    }
+.tracking-id {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .step {
-      position: relative;
-      margin-bottom: 25px;
-    }
+.tracking-id small {
+  color: #64748b;
+}
 
-    .step::before {
-      content: "";
-      position: absolute;
-      left: -29px;
-      top: 2px;
-      width: 12px;
-      height: 12px;
-      background: #2563eb;
-      border-radius: 50%;
-    }
+.tracking-id h2 {
+  margin-top: 7px;
+  font-size: 22px;
+}
 
-    .step h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+.details {
+  display: grid;
+  gap: 14px;
+}
 
-    .step p {
-      color: #64748b;
-      font-size: 14px;
-    }
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 25px;
-      color: #64748b;
-      font-size: 13px;
-    }
+.label {
+  color: #64748b;
+}
 
-    @media (max-width: 500px) {
-      .card {
-        padding: 20px;
-      }
+.value {
+  font-weight: 600;
+  text-align: right;
+}
 
-      .row {
-        flex-direction: column;
-        gap: 4px;
-      }
+.timeline {
+  margin-top: 30px;
+  border-left: 3px solid #2563eb;
+  padding-left: 20px;
+}
 
-      .value {
-        text-align: left;
-      }
-    }
-  </style>
+.step {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.step h3 {
+  font-size: 16px;
+}
+
+.step p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+@media(max-width:500px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .value {
+    text-align: left;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header class="header">
-    <h1>🎁 GiftHub</h1>
-    <p>Shipment Tracking</p>
-  </header>
+<header class="header">
+  <h1>🎁 GiftHub</h1>
+  <p> Shipment Tracking</p>
+</header>
 
-  <main class="container">
-    <div class="card">
+<div class="container">
+  <div class="card">
 
-      <div class="demo">
-         TRACKING — A REAL SHIPMENT
-      </div>
+    <div class="demo">
+      TRACKING — A REAL COURIER SERVICE
+    </div>
 
-      <div class="tracking">
-        <small>Tracking ID</small>
-        <div class="tracking-code">GH-IND-261013-SHR086</div>
-      </div>
+    <div class="search-box">
+      <input
+        type="text"
+        id="trackingInput"
+        placeholder="Enter Tracking Code"
+        autocomplete="off"
+      >
+      <button onclick="trackPackage()">Search</button>
+    </div>
+
+    <div id="error">
+      ❌ Tracking code not found. Please check the code.
+    </div>
+
+    <div id="result">
 
       <div class="status">
         🟢 Scheduled for Delivery — 13 October 2026
       </div>
 
-      <div class="info">
+      <div class="tracking-id">
+        <small>Tracking ID</small>
+        <h2 id="showTracking"></h2>
+      </div>
+
+      <div class="details">
+
         <div class="row">
           <span class="label">Customer</span>
           <span class="value">Sharon</span>
         </div>
 
         <div class="row">
-          <span class="label">Destination</span>
-          <span class="value">Bandlaguda Jagir, Hyderabad</span>
+          <span class="label">Mobile</span>
+          <span class="value">9666587443</span>
+        </div>
+
+        <div class="row">
+          <span class="label">Address</span>
+          <span class="value">
+            3-4-38, Adarsh Nagar Colony,<br>
+            Bandlaguda Jagir, Hyderabad
+          </span>
         </div>
 
         <div class="row">
@@ -214,38 +286,81 @@
           <span class="label">Expected Delivery</span>
           <span class="value">13 October 2026</span>
         </div>
+
       </div>
 
       <div class="timeline">
 
         <div class="step">
-          <h3>Order Confirmed</h3>
+          <h3>✅ Order Confirmed</h3>
           <p>Shipment information received.</p>
         </div>
 
         <div class="step">
-          <h3>In Transit</h3>
-          <p>Package is being prepared for delivery.</p>
+          <h3>✅ In Transit</h3>
+          <p>Package is being processed.</p>
         </div>
 
         <div class="step">
-          <h3>Out for Delivery</h3>
-          <p>Scheduled for 13 October 2026.</p>
+          <h3>📦 Delivery Scheduled</h3>
+          <p>Expected delivery: 13 October 2026.</p>
         </div>
 
         <div class="step">
-          <h3>Delivered</h3>
+          <h3>⏳ Delivered</h3>
           <p>Pending delivery.</p>
         </div>
 
       </div>
 
-      <footer>
-        Hamper Box Tracking Portal © 2026
-      </footer>
-
     </div>
-  </main>
+
+    <footer>
+      Gift Box Tracking Portal © 2026
+    </footer>
+
+  </div>
+</div>
+
+<script>
+
+const validTrackingCode = "GH-IND-261013-SHR086";
+
+function trackPackage() {
+
+  const input = document
+    .getElementById("trackingInput")
+    .value
+    .trim()
+    .toUpperCase();
+
+  const result = document.getElementById("result");
+  const error = document.getElementById("error");
+  const showTracking = document.getElementById("showTracking");
+
+  result.style.display = "none";
+  error.style.display = "none";
+
+  if (input === validTrackingCode) {
+
+    showTracking.textContent = validTrackingCode;
+    result.style.display = "block";
+
+  } else {
+
+    error.style.display = "block";
+
+  }
+}
+
+// Enter key se bhi search hoga
+document.getElementById("trackingInput").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    trackPackage();
+  }
+});
+
+</script>
 
 </body>
-                                </html>
+</html>
